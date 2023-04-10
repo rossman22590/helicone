@@ -72,12 +72,12 @@ const AuthLayout = (props: AuthLayoutProps) => {
   ];
 
   const accountNav = [
-    {
-      name: "Usage",
-      href: "/usage",
-      icon: BeakerIcon,
-      current: pathname === "/usage",
-    },
+    // {
+    //   name: "Usage",
+    //   href: "/usage",
+    //   icon: BeakerIcon,
+    //   current: pathname === "/usage",
+    // },
     {
       name: "Keys",
       href: "/keys",
@@ -277,26 +277,8 @@ const AuthLayout = (props: AuthLayoutProps) => {
                         </nav>
                       </div>
                       <ul className="p-4 font-medium text-md text-gray-500 space-y-4">
-                        <li>
-                          <Link
-                            href="https://docs.helicone.ai/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-gray-900"
-                          >
-                            Docs
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="https://discord.gg/zsSTcH2qhG"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-gray-900"
-                          >
-                            Discord
-                          </Link>
-                        </li>
+                        <li></li>
+                        <li></li>
                       </ul>
                       <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
                         <div className="group block w-full flex-shrink-0">
@@ -504,26 +486,8 @@ const AuthLayout = (props: AuthLayoutProps) => {
                   </nav>
                 </div>
                 <ul className="p-4 font-medium text-sm text-gray-500 space-y-4">
-                  <li>
-                    <Link
-                      href="https://docs.helicone.ai/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-gray-900"
-                    >
-                      Docs
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://discord.gg/zsSTcH2qhG"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-gray-900"
-                    >
-                      Discord
-                    </Link>
-                  </li>
+                  <li></li>
+                  <li></li>
                 </ul>
                 <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
                   <div className="group block w-full flex-shrink-0">
