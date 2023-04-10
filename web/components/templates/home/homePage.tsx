@@ -50,9 +50,9 @@ const timeline = [
     dateTime: "2023-01",
   },
   {
-    name: "Launched ChatConsole",
+    name: "Launched Helicone",
     description:
-      "After building multiple LLM apps and struggling with the lack of good monitoring and observability tools, we decided to build ChatConsole.",
+      "After building multiple LLM apps and struggling with the lack of good monitoring and observability tools, we decided to build Helicone.",
     date: "Feb 2022",
     dateTime: "2023-02",
   },
@@ -71,7 +71,7 @@ const testimonials = [
       {
         body: `Keeping costs under control was a huge issue 2-3 weeks ago but we are now profitable per user.
         We leveraged a mix of caching, model-swapping, fine-tuning, and product updates to get here
-        ChatConsole has been a godsend for LLM cost analytics, especially cost/user`,
+        @helicone_ai has been a godsend for LLM cost analytics, especially cost/user`,
         author: {
           name: "Daniel Habib",
           handle: "DannyHabibs",
@@ -81,7 +81,7 @@ const testimonials = [
     ],
     [
       {
-        body: "My favourite of the new AI apps? ChatConsole - Observability for @OpenAI is pretty bad. Hard to track bills and specific usage with native tools. I see Helicone as the next @datadoghq",
+        body: "My favourite of the new AI apps? @helicone_ai - Observability for @OpenAI is pretty bad. Hard to track bills and specific usage with native tools. I see Helicone as the next @datadoghq",
         author: {
           name: "John Ndege",
           handle: "johnndege",
@@ -94,7 +94,7 @@ const testimonials = [
   [
     [
       {
-        body: `I'm now using ChatConsole and it's a major QoL improvement while deving on LLMs
+        body: `I'm now using Helicone and it's a major QoL improvement while deving on LLMs
 
         Add one line to your python/JS OpenAI project and get
         - input/output logging
@@ -112,7 +112,7 @@ const testimonials = [
     ],
     [
       {
-        body: `As an early-stage startup, speed is everything at Trelent. ChatConsole helps us quickly understand user behaviour when we're iterating with OpenAI, shorten our testing cycles.`,
+        body: `As an early-stage startup, speed is everything at Trelent. Helicone helps us quickly understand user behaviour when we're iterating with OpenAI, shorten our testing cycles.`,
         author: {
           name: "Calum Bird",
           handle: "calumbirdo",
@@ -171,6 +171,19 @@ export default function HomePage() {
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8 space-y-4 sm:space-y-8">
               <div className="mt-24 sm:mt-32 lg:mt-8">
                 <div className="inline-flex space-x-6">
+                  <span className="rounded-full bg-orange-600/10 px-3 py-1 text-sm font-semibold leading-6 text-orange-600 ring-1 ring-inset ring-orange-600/10">
+                    Backed by Y Combinator
+                  </span>
+                  <Link
+                    href="https://github.com/Helicone/helicone"
+                    className="sm:inline-flex hidden items-center space-x-2 text-m font-medium leading-6 text-gray-600"
+                  >
+                    <span className="underline">We&apos;re open source</span>
+                    <ChevronRightIcon
+                      className="h-5 w-5 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </Link>
                 </div>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -308,7 +321,7 @@ export default function HomePage() {
               <p className="mt-6 text-lg sm:text-xl leading-7 text-gray-600">
                 Cache requests to save on latency and money, proactively track
                 errors in your application, handle rate limits and reliability
-                concerns with ChatConsole.
+                concerns with Helicone.
               </p>
             </div>
             <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
@@ -342,7 +355,7 @@ export default function HomePage() {
                 <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
                   <p className="mt-2 leading-7 text-sky-50 text-lg">
                     Trusted by hundreds of developers who share their projects
-                    in ChatConsole&apos;s vibrant community
+                    in Helicone&apos;s vibrant community
                   </p>
                 </div>
               </div>
@@ -350,14 +363,14 @@ export default function HomePage() {
           </div>
         </div>
         {/* Open Source */}
-        {/* <div className="bg-gray-50 py-24 sm:py-32">
+        <div className="bg-gray-50 py-24 sm:py-32">
           <div className="flex flex-col sm:flex-row w-full justify-between mx-auto max-w-7xl px-6 lg:px-8 items-start sm:items-center space-y-6 sm:space-y-0">
             <div className="mx-auto max-w-2xl lg:mx-0 space-y-4 sm:space-y-8">
               <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 Join our fast-growing open source community
               </h2>
               <p className="text-lg sm:text-xl leading-7 text-gray-600">
-              ChatConsole is developer-driven and committed to keeping it that
+                Helicone is developer-driven and committed to keeping it that
                 way. Contributors actively participate in{" "}
                 <a
                   href="https://www.helicone.ai/roadmap"
@@ -389,7 +402,7 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-        </div> */}
+        </div>
       </BasePageV2>
     </>
   );

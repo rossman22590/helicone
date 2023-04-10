@@ -189,7 +189,7 @@ const KeyPage = (props: KeyPageProps) => {
             },
             {
               icon: BuildingOfficeIcon,
-              label: "ChatConsole Keys",
+              label: "Helicone Keys",
             },
           ]}
           onOptionSelect={(option) => {
