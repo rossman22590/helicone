@@ -79,7 +79,7 @@ const Login = (props: LoginProps) => {
             ? "Login"
             : formState === "reset"
             ? "Reset Password"
-            : "Welcome to Helicone"}
+            : "Welcome to ChatConsole"}
         </p>
       </div>
       <div className="flex flex-col space-y-2">
