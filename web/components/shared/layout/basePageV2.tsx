@@ -70,10 +70,8 @@ const BasePageV2 = (props: BasePageV2Props) => {
                 ))}
               </div>
               <div className="mt-8 text-xs sm:text-base text-gray-400 md:order-1 md:mt-0 flex flex-row gap-4">
-                <span className="hidden sm:inline">             
-                </span>
-                <span className="inline sm:hidden">
-                </span>
+                <span className="hidden sm:inline"></span>
+                <span className="inline sm:hidden"></span>
                 <Link href={"/privacy"} className="hover:text-black">
                   Privacy Policy
                 </Link>
