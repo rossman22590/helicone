@@ -42,13 +42,13 @@ const timeline = [
     date: "Jan 2023",
     dateTime: "2023-01",
   },
-  {
-    name: "Backed by Y Combinator",
-    description:
-      "We were accepted into YCombinator's Winter 2023 batch and have been working closely with the YC partners.",
-    date: "Jan 2023",
-    dateTime: "2023-01",
-  },
+  // {
+  //   name: "Backed by Y Combinator",
+  //   description:
+  //     "We were accepted into YCombinator's Winter 2023 batch and have been working closely with the YC partners.",
+  //   date: "Jan 2023",
+  //   dateTime: "2023-01",
+  // },
   {
     name: "Launched Helicone",
     description:
@@ -174,7 +174,7 @@ export default function HomePage() {
                   <span className="rounded-full bg-orange-600/10 px-3 py-1 text-sm font-semibold leading-6 text-orange-600 ring-1 ring-inset ring-orange-600/10">
                     Backed by Y Combinator
                   </span>
-                  <Link
+                  {/* <Link
                     href="https://github.com/Helicone/helicone"
                     className="sm:inline-flex hidden items-center space-x-2 text-m font-medium leading-6 text-gray-600"
                   >
@@ -183,7 +183,7 @@ export default function HomePage() {
                       className="h-5 w-5 text-gray-400"
                       aria-hidden="true"
                     />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
@@ -321,7 +321,7 @@ export default function HomePage() {
               <p className="mt-6 text-lg sm:text-xl leading-7 text-gray-600">
                 Cache requests to save on latency and money, proactively track
                 errors in your application, handle rate limits and reliability
-                concerns with Helicone.
+                concerns with ChatConsole.
               </p>
             </div>
             <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
@@ -355,7 +355,7 @@ export default function HomePage() {
                 <div className="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
                   <p className="mt-2 leading-7 text-sky-50 text-lg">
                     Trusted by hundreds of developers who share their projects
-                    in Helicone&apos;s vibrant community
+                    in ChatConsole&apos;s vibrant community
                   </p>
                 </div>
               </div>
@@ -370,10 +370,10 @@ export default function HomePage() {
                 Join our fast-growing open source community
               </h2>
               <p className="text-lg sm:text-xl leading-7 text-gray-600">
-                Helicone is developer-driven and committed to keeping it that
+              ChatConsole is developer-driven and committed to keeping it that
                 way. Contributors actively participate in{" "}
                 <a
-                  href="https://www.helicone.ai/roadmap"
+                  href="/roadmap"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sky-500 hover:text-sky-700 underline"
@@ -384,7 +384,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="block space-x-4">
-              <a
+              {/* <a
                 href="https://discord.gg/zsSTcH2qhG"
                 target="_blank"
                 rel="noreferrer"
@@ -399,7 +399,7 @@ export default function HomePage() {
                 className="rounded-md bg-sky-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
               >
                 View Github
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
