@@ -22,7 +22,7 @@ We are solving that problem by offering an open source observability platform th
 ## Community
 
 Keep up to date with what we're working on by joining our [Discord](https://discord.gg/zsSTcH2qhG). We're more than happy to answer any questions you may have or to discuss the current state of the AI industry.
-
+ 
 We use GitHub issues for tracking requests and bugs and we strive to abide by industry-standard best practices in open-source software development.
 
 ## Roadmap
