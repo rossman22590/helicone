@@ -17,7 +17,6 @@ import OnboardingButton from "../auth/onboardingButton";
 import { SocialMeta } from "./basePageV2";
 
 const navigation = [
-  
   {
     name: "Roadmap",
     description: "See what we're working on and what's coming next.",
