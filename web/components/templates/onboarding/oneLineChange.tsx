@@ -33,7 +33,7 @@ const OneLineChange = (props: OneLineChangeProps) => {
               <p className="text-gray-300">openai.api_base</p>
               <p className="text-blue-300">=</p>
               <p className="text-blue-400">
-                &quot;https://oai.hconeai.com/v1&quot;
+                &quot;https://api.chatconsole.org/v1&quot;
               </p>
             </div>
           </>
@@ -49,7 +49,7 @@ const OneLineChange = (props: OneLineChangeProps) => {
               <p className="text-red-500">https://api.openai.com/v1</p>
             </div>
             <div className="flex flex-row gap-2 mt-4">
-              <p className="text-gray-300">with Helicone</p>
+              <p className="text-gray-300">with ChatConsole</p>
             </div>
             <div className="flex flex-row gap-2">
               <p className="text-purple-500">POST </p>
