@@ -53,7 +53,7 @@ const OneLineChange = (props: OneLineChangeProps) => {
             </div>
             <div className="flex flex-row gap-2">
               <p className="text-purple-500">POST </p>
-              <p className="text-green-500">https://oai.hconeai.com/v1</p>
+              <p className="text-green-500">https://api.chatconsole.org/v1</p>
             </div>
           </>
         );
@@ -98,7 +98,7 @@ const OneLineChange = (props: OneLineChangeProps) => {
                 </div>
 
                 <div className="flex flex-row">
-                  <p className="text-blue-300">{`"https://oai.hconeai.com/v1"`}</p>
+                  <p className="text-blue-300">{`"https://api.chatconsole.org/v1"`}</p>
                   <p className="text-gray-300">,</p>
                 </div>
               </div>
@@ -143,7 +143,7 @@ const OneLineChange = (props: OneLineChangeProps) => {
         <div className="flex flex-row bg-green-900">
           <PlusIcon className="h-4 w-4 mt-4 mx-4" />
           <code className="py-2 px-4  bg-green-800">
-            <span className="p-1 rounded-md bg-green-700">oai.hconeai</span>
+            <span className="p-1 rounded-md bg-green-700">api.chatconsole</span>
             .com/v1
           </code>
         </div>
@@ -205,11 +205,11 @@ const OneLineChange = (props: OneLineChangeProps) => {
       </div>
       <div className="sm:text-sm text-blue">
         <span>By using our API, you agree to our </span>
-        <a href="https://www.helicone.ai/privacy" className="text-blue-500">
+        <a href="https://www.dash.chatconsole.org/privacy" className="text-blue-500">
           Privacy Policy
         </a>{" "}
         and{" "}
-        <a href="https://www.helicone.ai/terms" className="text-blue-500">
+        <a href="https://www.dash.chatconsole.org/terms" className="text-blue-500">
           Terms of Service
         </a>{" "}
         agreements
