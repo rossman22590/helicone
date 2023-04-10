@@ -138,7 +138,7 @@ const KeyPage = (props: KeyPageProps) => {
           </div>
 
           <span className="mt-2 block text-sm font-medium text-red-500">
-            Add a key to get started using Helicone{"'"}s API Key
+            Add a key to get started using TSI{"'"}s API Key
           </span>
         </div>
       );
@@ -189,7 +189,7 @@ const KeyPage = (props: KeyPageProps) => {
             },
             {
               icon: BuildingOfficeIcon,
-              label: "Helicone Keys",
+              label: "TSI API Keys",
             },
           ]}
           onOptionSelect={(option) => {
@@ -251,7 +251,7 @@ const KeyPage = (props: KeyPageProps) => {
             <div className="flex flex-row sm:items-center pb-2 mb-2 justify-between">
               <div className="sm:flex-auto items-center flex flex-row space-x-4 justify-between">
                 <h1 className="text-lg font-semibold text-gray-900">
-                  Helicone API (beta)
+                  TSI API (beta)
                 </h1>
                 <Link
                   href="/api/graphql"
