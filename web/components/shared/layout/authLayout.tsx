@@ -276,7 +276,7 @@ const AuthLayout = (props: AuthLayoutProps) => {
                           })}
                         </nav>
                       </div>
-                        <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
+                      <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
                         <div className="group block w-full flex-shrink-0">
                           <Disclosure>
                             <div className="flex items-center">
