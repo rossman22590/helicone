@@ -22,7 +22,7 @@ const OneLineChange = (props: OneLineChangeProps) => {
           <>
             <div className="flex flex-row gap-2">
               <p className="text-gray-300">
-                # Change the default base API url to Helicone&apos;s
+                # Change the default base API url to ChatConsole&apos;s
               </p>
             </div>
             <div className="flex flex-row gap-2">
