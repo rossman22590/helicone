@@ -54,7 +54,7 @@ const NavBarV2 = (props: NavBarV2Props) => {
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Helicone</span>
+            <span className="sr-only">ChatConsole</span>
             {/* 1324 × 364 */}
             <Image
               className="hidden sm:block rounded-md"
@@ -131,7 +131,7 @@ const NavBarV2 = (props: NavBarV2Props) => {
             <div>
               <div className="flex items-center gap-x-6 justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Helicone</span>
+                  <span className="sr-only">ChatConsole</span>
                   <Image
                     className="rounded-md"
                     src="/assets/heli-full-logo.png"
