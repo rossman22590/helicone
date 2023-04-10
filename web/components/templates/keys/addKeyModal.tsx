@@ -38,14 +38,14 @@ const AddKeyModal = (props: AddKeyModalProps) => {
               OpenAI. We do <span className="font-bold">not</span> store your
               API key on our servers.
             </p>
-            <Link
+            {/* <Link
               href="https://docs.helicone.ai/getting-started/how-encryption-works"
               target="_blank"
               rel="noopener noreferrer"
               className="underline inline-flex text-sm flex-row w-fit"
             >
               Learn More
-            </Link>
+            </Link> */}
 
             <div className="w-full">
               <label

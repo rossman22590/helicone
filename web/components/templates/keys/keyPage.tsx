@@ -87,7 +87,7 @@ const KeyPage = (props: KeyPageProps) => {
           </div>
 
           <span className="mt-2 block text-sm font-medium text-red-500">
-            Add a key to get started using Helicone
+            Add a key to get started using ChatConsole
           </span>
         </div>
       );
@@ -138,7 +138,7 @@ const KeyPage = (props: KeyPageProps) => {
           </div>
 
           <span className="mt-2 block text-sm font-medium text-red-500">
-            Add a key to get started using Helicone{"'"}s API Key
+            Add a key to get started using ChatConsole{"'"}s API Key
           </span>
         </div>
       );
@@ -189,7 +189,7 @@ const KeyPage = (props: KeyPageProps) => {
             },
             {
               icon: BuildingOfficeIcon,
-              label: "Helicone Keys",
+              label: "ChatConsole Keys",
             },
           ]}
           onOptionSelect={(option) => {
@@ -245,13 +245,13 @@ const KeyPage = (props: KeyPageProps) => {
           </div>
         </div>
       )}
-      {selectedTab === "Helicone Keys" && (
+      {selectedTab === "ChatConsole Keys" && (
         <div className="flex flex-col gap-2 max-w-2xl space-y-12 mt-8">
           <div className="text-gray-900 space-y-4 text-sm">
             <div className="flex flex-row sm:items-center pb-2 mb-2 justify-between">
               <div className="sm:flex-auto items-center flex flex-row space-x-4 justify-between">
                 <h1 className="text-lg font-semibold text-gray-900">
-                  Helicone API (beta)
+                ChatConsole API (beta)
                 </h1>
                 <Link
                   href="/api/graphql"
@@ -265,7 +265,7 @@ const KeyPage = (props: KeyPageProps) => {
               </div>
             </div>
             <p className="text-sm text-gray-900">
-              The keys below are used for the Helicone API. This is currently in
+              The keys below are used for the ChatConsole API. This is currently in
               beta and will be subject to change.
             </p>
             {isLoading ? (
@@ -331,9 +331,9 @@ const KeyPage = (props: KeyPageProps) => {
       {deleteHeliconeOpen && selectedHeliconeKey !== undefined && (
         <ThemedModal open={deleteHeliconeOpen} setOpen={setDeleteHeliconeOpen}>
           <div className="flex flex-col gap-4 w-full">
-            <p className="font-bold text-lg">Delete Helicone Key</p>
+            <p className="font-bold text-lg">Delete ChatConsole Key</p>
             <p className="text-gray-700 w-[400px] whitespace-pre-wrap text-sm">
-              This Helicone key will be deleted from your account. You will no
+              This ChatConsole key will be deleted from your account. You will no
               longer be able to use this for the your API requests. Are you sure
               you want to delete this key permanently?
             </p>
