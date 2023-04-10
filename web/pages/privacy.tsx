@@ -43,11 +43,11 @@ const Privacy = (props: PrivacyProps) => {
 const pageContent: PageContentProps[] = [
   {
     title: "Introduction",
-    description: `Welcome to Helicone, Inc. Helicone, Inc. (“us”, “we”, or “our”) operates https://www.helicone.ai/ (hereinafter referred to as “Service”). Our Privacy Policy governs your visit to https://www.helicone.ai/, and explains how we collect, safeguard and disclose information that results from your use of our Service. We use your data to provide and improve Service. By using Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions. Our Terms and Conditions (“Terms”) govern all use of our Service and together with the Privacy Policy constitutes your agreement with us (“agreement”).`,
+    description: `Welcome to ChatConsole, Inc. TSI, Inc. (“us”, “we”, or “our”) operates https://www.dash.chatconsole.org/ (hereinafter referred to as “Service”). Our Privacy Policy governs your visit to https://www.dash.chatconsole.org/, and explains how we collect, safeguard and disclose information that results from your use of our Service. We use your data to provide and improve Service. By using Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions. Our Terms and Conditions (“Terms”) govern all use of our Service and together with the Privacy Policy constitutes your agreement with us (“agreement”).`,
   },
   {
     title: "Definitions",
-    description: `SERVICE means the https://www.helicone.ai/ website operated by Helicone, Inc.
+    description: `SERVICE means the https://www.dash.chatconsole.org/ website operated by ChatConsole, Inc.
  
 PERSONAL DATA means data about a living individual who can be identified from those data (or from those and other information either in our possession or likely to come into our possession).
      
@@ -83,7 +83,7 @@ While using our Service, we may ask you to provide us with certain personally id
  
 - Cookies and Usage Data
  
-We may use your Personal Data to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or by emailing at help@helicone.ai.
+We may use your Personal Data to contact you with newsletters, marketing or promotional materials and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or by emailing at support@mytsi.org.
  
 Usage Data
 We may also collect information that your browser sends whenever you visit our Service or when you access Service by or through a mobile device (“Usage Data”).
@@ -121,7 +121,7 @@ While using our Service, we may also collect the following information: sex, age
   {
     title: "Use of Data",
     description: `
-Helicone, Inc. uses the collected data for various purposes:
+TSI, Inc. uses the collected data for various purposes:
  
 - to provide and maintain our Service;
  
@@ -169,7 +169,7 @@ If you are located outside United States and choose to provide information to us
  
 Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.
  
-Helicone, Inc. will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless there are adequate controls in place including the security of your data and other personal information.
+TSI, Inc. will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organisation or a country unless there are adequate controls in place including the security of your data and other personal information.
 
     `,
   },
@@ -208,7 +208,7 @@ If you are a resident of the European Union (EU) and European Economic Area (EEA
  
 We aim to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.
  
-If you wish to be informed what Personal Data we hold about you and if you want it to be removed from our systems, please email us at help@helicone.ai. 
+If you wish to be informed what Personal Data we hold about you and if you want it to be removed from our systems, please email us at support@mytsi.org. 
  
 In certain circumstances, you have the following data protection rights:
  
@@ -244,7 +244,7 @@ According to CalOPPA we agree to the following:
  
 - users will be notified of any privacy policy changes on our Privacy Policy Page;
  
-- users are able to change their personal information by emailing us at help@helicone.ai. 
+- users are able to change their personal information by emailing us at support@mytsi.org. 
  
 Our Policy on “Do Not Track” Signals:
  
@@ -307,7 +307,7 @@ For more information on what data Circle CI collects for what purpose and how th
   {
     title: "Behavioral Remarketing",
     description: `
-Helicone, Inc. uses remarketing services to advertise on third party websites to you after you visited our Service. We and our third-party vendors use cookies to inform, optimise and serve ads based on your past visits to our Service.
+TSI, Inc. uses remarketing services to advertise on third party websites to you after you visited our Service. We and our third-party vendors use cookies to inform, optimise and serve ads based on your past visits to our Service.
  
 Google Ads (AdWords)
 Google Ads (AdWords) remarketing service is provided by Google Inc.
@@ -370,7 +370,7 @@ You are advised to review this Privacy Policy periodically for any changes. Chan
     description: `
 If you have any questions about this Privacy Policy, please contact us:
  
-By email: help@helicone.ai.
+By email: support@mytsi.org.
  
 `,
   },

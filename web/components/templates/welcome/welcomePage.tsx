@@ -36,7 +36,7 @@ export const BaseUrlInstructions = () => {
           <>
             <div className="flex flex-row gap-2">
               <p className="text-gray-300">
-                # Change the default base API url to Helicone&apos;s
+                # Change the default base API url to ChatConsole&apos;s
               </p>
             </div>
             <div className="flex flex-row gap-2">
@@ -342,7 +342,7 @@ const Step3 = () => {
             <div className="text-sm mt-10">
               Note: This should be instant, but if you{"'"}re still waiting
               after 30 seconds, please join our discord and we{"'"}ll help you
-              out. Or you can email us at help@helicone.ai.
+              out. Or you can email us at support@mytsi.org.
             </div>
           )}
         </div>
@@ -405,7 +405,7 @@ const WelcomePage = (props: DashboardPageProps) => {
     [key in Steps]: string;
   } = {
     1: "Replace you OpenAI base url",
-    2: "Add your OpenAI API Key to Helicone",
+    2: "Add your OpenAI API Key to ChatConsole",
     3: "Wait for your first event",
   };
 
@@ -417,7 +417,7 @@ const WelcomePage = (props: DashboardPageProps) => {
         sm:max-w-2xl flex flex-col space-y-2 w-full min-w-[300px] sm:min-w-[450px]"
         >
           <h1 className="text-3xl font-bold text-gray-900 w-full text-center mb-10">
-            Welcome to Helicone 🚀
+            Welcome to ChatConsole 🚀
           </h1>
           <div className="w-full border-b border-gray-300 pb-4 justify-between flex flex-col items-center text-center space-y-4">
             <p className="text-lg font-medium w-full">{`Step ${step}: ${stepMessage[step]}`}</p>

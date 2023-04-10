@@ -82,9 +82,9 @@ const Home = (props: HomeProps) => {
               <p className="text-5xl font-sans">Roadmap</p>
               <p className="text-lg font-sans">
                 We are building a community-driven roadmap. View and vote on
-                issues that you would like to see implemented in Helicone.
+                issues that you would like to see implemented in ChatConsole.
               </p>
-              <p className="text-lg font-sans">
+              {/* <p className="text-lg font-sans">
                 Have an idea for a feature? Create an issue on our{" "}
                 <Link
                   href="https://github.com/Helicone/helicone/issues"
@@ -104,7 +104,7 @@ const Home = (props: HomeProps) => {
                   Discord
                 </Link>
                 .
-              </p>
+              </p> */}
             </div>
             {isLoading ? (
               <LoadingAnimation title="Loading Roadmap..." />

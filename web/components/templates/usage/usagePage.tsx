@@ -291,8 +291,8 @@ const UsagePage = (props: UsagePageProps) => {
                 <div className="">
                   You have exceeded your request limit, please upgrade your
                   plan. Please email{" "}
-                  <a href="mailto:sales@helicone.ai" className="text-red-700">
-                    sales@helicone.ai
+                  <a href="mailto:support@mytsi.org" className="text-red-700">
+                  support@mytsi.org
                   </a>{" "}
                   if you have any questions.
                 </div>

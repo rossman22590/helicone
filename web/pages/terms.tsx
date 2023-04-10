@@ -42,15 +42,15 @@ const pageContent: PageContentProps[] = [
   {
     title: "Introduction",
     description: `
-Welcome to Helicone, Inc. (“Company”, “we”, “our”, “us”)! As you have just clicked our Terms of Service, please pause, grab a cup of coffee and carefully read the following pages. It will take you approximately 20 minutes.
+Welcome to TSI, Inc. (“Company”, “we”, “our”, “us”)! As you have just clicked our Terms of Service, please pause, grab a cup of coffee and carefully read the following pages. It will take you approximately 20 minutes.
  
-These Terms of Service (“Terms”, “Terms of Service”) govern your use of our web pages located at helicone.ai operated by Helicone, Inc.
+These Terms of Service (“Terms”, “Terms of Service”) govern your use of our web pages located at dash.chatconsole.org operated by TSI, Inc.
  
-Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our web pages. Please read it here https://www.helicone.ai/privacy-policy.
+Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our web pages. Please read it here https://www.dash.chatconsole.org/privacy-policy.
  
 Your agreement with us includes these Terms and our Privacy Policy (“Agreements”). You acknowledge that you have read and understood Agreements, and agree to be bound of them.
  
-If you do not agree with (or cannot comply with) Agreements, then you may not use the Service, but please let us know by emailing at help@helicone.ai so we can try to find a solution. These Terms apply to all visitors, users and others who wish to access or use Service.
+If you do not agree with (or cannot comply with) Agreements, then you may not use the Service, but please let us know by emailing at support@mytsi.org so we can try to find a solution. These Terms apply to all visitors, users and others who wish to access or use Service.
  
 Thank you for being responsible.
 `,
@@ -84,31 +84,31 @@ Any contests, sweepstakes or other promotions (collectively, “Promotions”) m
     description: `
 Some parts of Service are billed on a subscription basis (“Subscription(s)”). You will be billed in advance on a recurring and periodic basis (“Billing Cycle”). Billing cycles are set either on a monthly or annual basis, depending on the type of subscription plan you select when purchasing a Subscription.
  
-At the end of each Billing Cycle, your Subscription will automatically renew under the exact same conditions unless you cancel it or Helicone, Inc. cancels it. You may cancel your Subscription renewal either through your online account management page or by contacting Helicone, Inc. customer support team.
+At the end of each Billing Cycle, your Subscription will automatically renew under the exact same conditions unless you cancel it or TSI, Inc. cancels it. You may cancel your Subscription renewal either through your online account management page or by contacting TSI, Inc. customer support team.
  
-A valid payment method, including credit card, is required to process the payment for your subscription. You shall provide Helicone, Inc. with accurate and complete billing information including full name, address, state, zip code, telephone number, and a valid payment method information. By submitting such payment information, you automatically authorize Helicone, Inc. to charge all Subscription fees incurred through your account to any such payment instruments.
+A valid payment method, including credit card, is required to process the payment for your subscription. You shall provide TSI, Inc. with accurate and complete billing information including full name, address, state, zip code, telephone number, and a valid payment method information. By submitting such payment information, you automatically authorize TSI, Inc. to charge all Subscription fees incurred through your account to any such payment instruments.
  
-Should automatic billing fail to occur for any reason, Helicone, Inc. will issue an electronic invoice indicating that you must proceed manually, within a certain deadline date, with the full payment corresponding to the billing period as indicated on the invoice.
+Should automatic billing fail to occur for any reason, TSI, Inc. will issue an electronic invoice indicating that you must proceed manually, within a certain deadline date, with the full payment corresponding to the billing period as indicated on the invoice.
 `,
   },
   {
     title: "Free Trial",
     description: `
-Helicone, Inc. may, at its sole discretion, offer a Subscription with a free trial for a limited period of time (“Free Trial”).
+TSI, Inc. may, at its sole discretion, offer a Subscription with a free trial for a limited period of time (“Free Trial”).
  
 You may be required to enter your billing information in order to sign up for Free Trial.
  
-If you do enter your billing information when signing up for Free Trial, you will not be charged by Helicone, Inc. until Free Trial has expired. On the last day of Free Trial period, unless you cancelled your Subscription, you will be automatically charged the applicable Subscription fees for the type of Subscription you have selected.
+If you do enter your billing information when signing up for Free Trial, you will not be charged by TSI, Inc. until Free Trial has expired. On the last day of Free Trial period, unless you cancelled your Subscription, you will be automatically charged the applicable Subscription fees for the type of Subscription you have selected.
  
-At any time and without notice, Helicone, Inc. reserves the right to (i) modify Terms of Service of Free Trial offer, or (ii) cancel such Free Trial offer.
+At any time and without notice, TSI, Inc. reserves the right to (i) modify Terms of Service of Free Trial offer, or (ii) cancel such Free Trial offer.
 `,
   },
   {
     title: "Fee Changes",
     description: `
-Helicone, Inc., in its sole discretion and at any time, may modify Subscription fees for the Subscriptions. Any Subscription fee change will become effective at the end of the then-current Billing Cycle.
+TSI, Inc., in its sole discretion and at any time, may modify Subscription fees for the Subscriptions. Any Subscription fee change will become effective at the end of the then-current Billing Cycle.
  
-Helicone, Inc. will provide you with a reasonable prior notice of any change in Subscription fees to give you an opportunity to terminate your Subscription before such change becomes effective.
+TSI, Inc. will provide you with a reasonable prior notice of any change in Subscription fees to give you an opportunity to terminate your Subscription before such change becomes effective.
  
 Your continued use of Service after Subscription fee change comes into effect constitutes your agreement to pay the modified Subscription fee amount.
 `,
@@ -127,9 +127,9 @@ By posting Content on or through Service, You represent and warrant that: (i) Co
  
 You retain any and all of your rights to any Content you submit, post or display on or through Service and you are responsible for protecting those rights. We take no responsibility and assume no liability for Content you or any third party posts on or through Service. However, by posting Content using Service you grant us the right and license to use, modify, publicly perform, publicly display, reproduce, and distribute such Content on and through Service. You agree that this license includes the right for us to make your Content available to other users of Service, who may also use your Content subject to these Terms.
  
-Helicone, Inc. has the right but not the obligation to monitor and edit all Content provided by users.
+TSI, Inc. has the right but not the obligation to monitor and edit all Content provided by users.
  
-In addition, Content found on or through this Service are the property of Helicone, Inc. or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.
+In addition, Content found on or through this Service are the property of TSI, Inc. or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.
 `,
   },
   {
@@ -209,14 +209,14 @@ We reserve the right to refuse service, terminate accounts, remove or edit conte
   {
     title: "Intellectual Property",
     description: `
-Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of Helicone, Inc. and its licensors. Service is protected by copyright, trademark, and other laws of the United States. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of Helicone, Inc..`,
+Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of TSI, Inc. and its licensors. Service is protected by copyright, trademark, and other laws of the United States. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of TSI, Inc..`,
   },
   {
     title: "Copyright Policy",
     description: `
 We respect the intellectual property rights of others. It is our policy to respond to any claim that Content posted on Service infringes on the copyright or other intellectual property rights (“Infringement”) of any person or entity.
  
-If you are a copyright owner, or authorized on behalf of one, and you believe that the copyrighted work has been copied in a way that constitutes copyright infringement, please submit your claim via email to help@helicone.ai, with the subject line: “Copyright Infringement” and include in your claim a detailed description of the alleged Infringement as detailed below, under “DMCA Notice and Procedure for Copyright Infringement Claims”
+If you are a copyright owner, or authorized on behalf of one, and you believe that the copyrighted work has been copied in a way that constitutes copyright infringement, please submit your claim via email to support@mytsi.org, with the subject line: “Copyright Infringement” and include in your claim a detailed description of the alleged Infringement as detailed below, under “DMCA Notice and Procedure for Copyright Infringement Claims”
  
 You may be held accountable for damages (including costs and attorneys' fees) for misrepresentation or bad-faith claims on the infringement of any Content found on and/or through Service on your copyright.
 `,
@@ -238,13 +238,13 @@ You may submit a notification pursuant to the Digital Millennium Copyright Act (
  
 - a statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner's behalf.
  
-You can contact our Copyright Agent via email at help@helicone.ai
+You can contact our Copyright Agent via email at support@mytsi.org
 `,
   },
   {
     title: "Error Reporting and Feedback",
     description: `
-You may provide us either directly at help@helicone.ai or via third party sites and tools with information and feedback concerning errors, suggestions for improvements, ideas, problems, complaints, and other matters related to our Service (“Feedback”). You acknowledge and agree that: (i) you shall not retain, acquire or assert any intellectual property right or other right, title or interest in or to the Feedback; (ii) Company may have development ideas similar to the Feedback; (iii) Feedback does not contain confidential information or proprietary information from you or any third party; and (iv) Company is not under any obligation of confidentiality with respect to the Feedback. In the event the transfer of the ownership to the Feedback is not possible due to applicable mandatory laws, you grant Company and its affiliates an exclusive, transferable, irrevocable, free-of-charge, sub-licensable, unlimited and perpetual right to use (including copy, modify, create derivative works, publish, distribute and commercialize) Feedback in any manner and for any purpose.
+You may provide us either directly at support@mytsi.org or via third party sites and tools with information and feedback concerning errors, suggestions for improvements, ideas, problems, complaints, and other matters related to our Service (“Feedback”). You acknowledge and agree that: (i) you shall not retain, acquire or assert any intellectual property right or other right, title or interest in or to the Feedback; (ii) Company may have development ideas similar to the Feedback; (iii) Feedback does not contain confidential information or proprietary information from you or any third party; and (iv) Company is not under any obligation of confidentiality with respect to the Feedback. In the event the transfer of the ownership to the Feedback is not possible due to applicable mandatory laws, you grant Company and its affiliates an exclusive, transferable, irrevocable, free-of-charge, sub-licensable, unlimited and perpetual right to use (including copy, modify, create derivative works, publish, distribute and commercialize) Feedback in any manner and for any purpose.
  
 The third party sites and tools mentioned above include the following:
  
@@ -254,11 +254,11 @@ Sentry is open-source error tracking solution provided by Functional Software In
   {
     title: "Links To Other Web Sites",
     description: `
-Our Service may contain links to third party web sites or services that are not owned or controlled by Helicone, Inc.
+Our Service may contain links to third party web sites or services that are not owned or controlled by TSI, Inc.
  
-Helicone, Inc. has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.
+TSI, Inc. has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.
  
-YOU ACKNOWLEDGE AND AGREE THAT HELICONE, INC. SHALL NOT BE RESPONSIBLE OR LIABLE, DIRECTLY OR INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED TO BE CAUSED BY OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH CONTENT, GOODS OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD PARTY WEB SITES OR SERVICES.
+YOU ACKNOWLEDGE AND AGREE THAT TSI, INC. SHALL NOT BE RESPONSIBLE OR LIABLE, DIRECTLY OR INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED TO BE CAUSED BY OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH CONTENT, GOODS OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD PARTY WEB SITES OR SERVICES.
  
 WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY POLICIES OF ANY THIRD PARTY WEB SITES OR SERVICES THAT YOU VISIT.
 `,
@@ -331,7 +331,7 @@ BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE THAT YOU HAVE
     title: "Contact Us",
     description: `
 Please send your feedback, comments, requests for technical support:
-By email: help@helicone.ai.
+By email: support@mytsi.org.
 `,
   },
 ];

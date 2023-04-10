@@ -17,7 +17,7 @@ const Dashboard = (props: DashboardProps) => {
   const { user, keys } = props;
 
   return (
-    <MetaData title="Welcome to Helicone">
+    <MetaData title="Welcome to ChatConsole">
       <WelcomePage user={user} keys={keys} />
     </MetaData>
   );
