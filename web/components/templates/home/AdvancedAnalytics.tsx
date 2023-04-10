@@ -59,7 +59,7 @@ export default function AdvancedAnalytics() {
             Advanced Analytics
           </h2>
           <p className="mt-3 text-3xl font-bold tracking-tight text-white">
-            Helicone helps businesses use large language models in production.
+            ChatConsole helps businesses use large language models in production.
           </p>
           <div className="mt-16 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
             {metrics.map((item) => (
