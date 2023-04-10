@@ -17,12 +17,7 @@ import OnboardingButton from "../auth/onboardingButton";
 import { SocialMeta } from "./basePageV2";
 
 const navigation = [
-  {
-    name: "Docs",
-    description: "Learn how to use Helicone to its fullest potential.",
-    href: "https://docs.helicone.ai/",
-    target: "_target",
-  },
+  
   {
     name: "Roadmap",
     description: "See what we're working on and what's coming next.",
