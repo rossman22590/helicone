@@ -55,7 +55,7 @@ const Details = () => {
                 Stay on top of your costs, usage, and latency
               </p>
               <p className="text-lg sm:text-xl leading-8 text-gray-600">
-                Integrate models like GPT-4 with ChatConsole to track API
+                Integrate models like GPT-4 with ChatConsole to track API requests
                 and visualize results.
               </p>
               <dl className="max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
