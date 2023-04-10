@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /*
   This example requires some changes to your config:
-  
+
   ```
   // tailwind.config.js
   module.exports = {
@@ -100,7 +100,7 @@ const testimonials = [
         - input/output logging
         - user-level metrics
         - caching (soon)
-        
+
         Also OSS 👏`,
         author: {
           name: "Jay Hack",
@@ -171,9 +171,9 @@ export default function HomePage() {
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0 lg:pt-8 space-y-4 sm:space-y-8">
               <div className="mt-24 sm:mt-32 lg:mt-8">
                 <div className="inline-flex space-x-6">
-                  <span className="rounded-full bg-orange-600/10 px-3 py-1 text-sm font-semibold leading-6 text-orange-600 ring-1 ring-inset ring-orange-600/10">
+                  {/* <span className="rounded-full bg-orange-600/10 px-3 py-1 text-sm font-semibold leading-6 text-orange-600 ring-1 ring-inset ring-orange-600/10">
                     Backed by Y Combinator
-                  </span>
+                  </span> */}
                   {/* <Link
                     href="https://github.com/Helicone/helicone"
                     className="sm:inline-flex hidden items-center space-x-2 text-m font-medium leading-6 text-gray-600"
