@@ -48,7 +48,7 @@ export const BaseUrlInstructions = () => {
               <p className="text-gray-300">openai.api_base</p>
               <p className="text-blue-300">=</p>
               <p className="text-blue-400">
-                &quot;https://oai.hconeai.com/v1&quot;
+                &quot;https://api.chatconsole.org/v1&quot;
               </p>
             </div>
           </>
@@ -69,7 +69,7 @@ export const BaseUrlInstructions = () => {
             <div className="flex flex-row gap-2 -ml-4 bg-green-900">
               <p className="text-green-700 pl-1 -mr-1 bg-green-900">+</p>
               <p className="text-purple-500">POST </p>
-              <p className="text-green-500">https://oai.hconeai.com/v1</p>
+              <p className="text-green-500">https://api.chatconsole.org/v1</p>
             </div>
           </>
         );
@@ -114,7 +114,7 @@ export const BaseUrlInstructions = () => {
                 </div>
 
                 <div className="flex flex-row">
-                  <p className="text-blue-300">{`"https://oai.hconeai.com/v1"`}</p>
+                  <p className="text-blue-300">{`"https://api.chatconsole.org/v1"`}</p>
                   <p className="text-gray-300">,</p>
                 </div>
               </div>
@@ -145,18 +145,18 @@ export const BaseUrlInstructions = () => {
     switch (lang) {
       case "node":
         navigator.clipboard.writeText(
-          `basePath: "https://oai.hconeai.com/v1" `
+          `basePath: "https://api.chatconsole.org/v1" `
         );
         setNotification("Copied Node code to clipboard", "success");
         break;
       case "python":
         navigator.clipboard.writeText(
-          `openai.api_base="https://oai.hconeai.com/v1"`
+          `openai.api_base="https://api.chatconsole.org/v1"`
         );
         setNotification("Copied Python code to clipboard", "success");
         break;
       case "curl":
-        navigator.clipboard.writeText(`https://oai.hconeai.com/v1`);
+        navigator.clipboard.writeText(`https://api.chatconsole.org/v1`);
         setNotification("Copied cURL code to clipboard", "success");
         break;
       default:
