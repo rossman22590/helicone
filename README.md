@@ -1,7 +1,7 @@
 ![Helicone Logo](https://github.com/Helicone/helicone/blob/main/web/public/assets/logos/logo-black.png)
 
 # Helicone.ai
-
+ 
 [![](https://img.shields.io/badge/Visit%20Us-Helicone.ai-brightgreen)](https://helicone.ai)
 [![](https://img.shields.io/badge/View%20Documentation-Docs-yellow)](https://docs.helicone.ai/)
 [![](https://img.shields.io/badge/Join%20our%20community-Discord-blue)](https://discord.gg/zsSTcH2qhG)
