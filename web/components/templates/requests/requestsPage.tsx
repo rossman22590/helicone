@@ -5,7 +5,7 @@ import {
   ColumnSizingState,
   createColumnHelper,
 } from "@tanstack/react-table";
-import { useRouter } from "next/router";
+import { NextRouter, Router, useRouter } from "next/router";
 import Papa from "papaparse";
 
 import { useEffect, useState } from "react";
@@ -85,6 +85,21 @@ interface RequestsPageProps {
   page: number;
   pageSize: number;
   sortBy: string | null;
+}
+
+function buildQueryFilter(router: NextRouter): FilterNode {
+  const { requestId } = router.query;
+  if (requestId) {
+    return {
+      request: {
+        id: {
+          equals: requestId as string,
+        },
+      },
+    };
+  } else {
+    return "all";
+  }
 }
 
 const RequestsPage = (props: RequestsPageProps) => {
@@ -319,6 +334,7 @@ const RequestsPage = (props: RequestsPageProps) => {
   );
 
   const debouncedAdvancedFilter = useDebounce(advancedFilters, 500);
+  const router = useRouter();
 
   const {
     count,
@@ -337,7 +353,12 @@ const RequestsPage = (props: RequestsPageProps) => {
     currentPageSize,
     debouncedAdvancedFilter,
     {
-      left: timeFilter,
+      left: {
+        left: timeFilter,
+        operator: "and",
+        //temporary fix until requests are their own page
+        right: buildQueryFilter(router),
+      },
       operator: "and",
       right: apiKeyFilter ? parseKey(apiKeyFilter) : "all",
     },
@@ -369,7 +390,7 @@ const RequestsPage = (props: RequestsPageProps) => {
   };
 
   const [selectedData, setSelectedData] = useState<RequestWrapper>();
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const selectRowHandler = (row: RequestWrapper, idx: number) => {
     setSelectedData(row);
@@ -683,15 +704,13 @@ const RequestsPage = (props: RequestsPageProps) => {
           </div>
         </div>
       </div>
-      {open && selectedData !== undefined && (
-        <RequestDrawer
-          open={open}
-          wrappedRequest={selectedData}
-          setOpen={setOpen}
-          values={values}
-          properties={properties}
-        />
-      )}
+      <RequestDrawer
+        open={open}
+        wrappedRequest={selectedData}
+        setOpen={setOpen}
+        values={values}
+        properties={properties}
+      />
     </>
   );
 };
