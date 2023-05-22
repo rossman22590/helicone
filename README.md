@@ -20,7 +20,7 @@
 - 🔜 (Coming soon) APIs to log feedback and evaluate results
 
 
-# Quick Use ⚡️
+# Quick Use ⚡️ 
 Get your API key by signing up [here](www.helicone.ai).
 ```bash
 export HELICONE_API_KEY=<your API key>
