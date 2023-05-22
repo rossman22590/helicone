@@ -1,20 +1,13 @@
-import { createClient } from "@supabase/supabase-js";
 import {
-  Env,
-  RequestSettings,
-  getHeliconeHeaders,
-  hash,
-  logRequest,
-  processAndLogRequestResponse,
-} from ".";
-import { extractPrompt } from "./prompt";
+  HeliconeProperties,
+  HeliconeProxyRequest,
+} from "./lib/HeliconeProxyRequest/mapper";
 
 export interface RateLimitOptions {
   time_window: number;
   segment: string | undefined;
   quota: number;
   unit: "token" | "request" | "dollar";
-  policy: string;
 }
 
 export interface RateLimitResponse {
@@ -42,48 +35,23 @@ function parsePolicy(input: string): RateLimitOptions {
     time_window,
     unit: unit || "request",
     segment,
-    policy: input,
   };
 }
 
-export const getRateLimitOptions = (
-  request: Request
-): RateLimitOptions | undefined => {
-  const policy = request.headers.get("Helicone-RateLimit-Policy");
-  if (policy) {
-    return parsePolicy(policy);
-  }
-  return undefined;
-};
-
 async function getSegmentKeyValue(
-  request: Request,
-  segment: string | undefined,
-  user: string | undefined
+  properties: HeliconeProperties,
+  userId: string | undefined,
+  segment: string | undefined
 ): Promise<string> {
   if (segment === undefined) {
     return "global";
   } else if (segment === "user") {
-    const heliconeUserIdHeader = "helicone-user-id";
-    const userId =
-      request.headers.get(heliconeUserIdHeader) ||
-      (request.body ? user : undefined);
     if (userId === undefined) {
       throw new Error("Missing user ID");
     }
     return `user=${userId}`;
   } else {
-    const propTag = "helicone-property-";
-    const heliconeHeaders = Object.fromEntries(
-      [...request.headers.entries()]
-        .filter(
-          ([key]) =>
-            key.toLowerCase().startsWith(propTag.toLowerCase()) &&
-            key.length > propTag.length
-        )
-        .map(([key, value]) => [key.substring(propTag.length), value])
-    );
-    const headerValue = heliconeHeaders[segment.toLowerCase()];
+    const headerValue = properties[segment.toLowerCase()];
     if (headerValue === undefined) {
       throw new Error(`Missing "${segment}" header`);
     }
@@ -113,20 +81,33 @@ function binarySearchFirstRelevantIndex(
   return result;
 }
 
-export async function checkRateLimit(
-  request: Request,
-  env: Env,
-  rateLimitOptions: RateLimitOptions,
-  hashedKey: string,
-  user: string | undefined
-): Promise<RateLimitResponse> {
-  const segment = rateLimitOptions.segment;
-  const quota = rateLimitOptions.quota;
-  const time_window = rateLimitOptions.time_window;
+interface RateLimitProps {
+  heliconeProperties: HeliconeProperties;
+  userId: string | undefined;
+  rateLimitOptions: RateLimitOptions;
+  providerAuthHash: string | undefined;
+  rateLimitKV: KVNamespace;
+}
 
-  const segmentKeyValue = await getSegmentKeyValue(request, segment, user);
-  const kvKey = `rl_${segmentKeyValue}_${hashedKey}`;
-  const kv = await env.RATE_LIMIT_KV.get(kvKey, "text");
+export async function checkRateLimit(
+  props: RateLimitProps
+): Promise<RateLimitResponse> {
+  const {
+    heliconeProperties,
+    userId,
+    rateLimitOptions,
+    providerAuthHash,
+    rateLimitKV,
+  } = props;
+  const { time_window, segment, quota } = rateLimitOptions;
+
+  const segmentKeyValue = await getSegmentKeyValue(
+    heliconeProperties,
+    userId,
+    segment
+  );
+  const kvKey = `rl_${segmentKeyValue}_${providerAuthHash}`;
+  const kv = await rateLimitKV.get(kvKey, "text");
   const timestamps = kv !== null ? JSON.parse(kv) : [];
 
   const now = Date.now();
@@ -165,18 +146,25 @@ export async function checkRateLimit(
 }
 
 export async function updateRateLimitCounter(
-  request: Request,
-  env: Env,
-  rateLimitOptions: RateLimitOptions,
-  hashedKey: string,
-  user: string | undefined
+  props: RateLimitProps
 ): Promise<void> {
-  const segment = rateLimitOptions.segment;
-  const time_window = rateLimitOptions.time_window;
+  const {
+    heliconeProperties,
+    userId,
+    rateLimitOptions,
+    providerAuthHash: heliconeAuthHash,
+    rateLimitKV,
+  } = props;
+  const { time_window, segment } = rateLimitOptions;
 
-  const segmentKeyValue = await getSegmentKeyValue(request, segment, user);
-  const kvKey = `rl_${segmentKeyValue}_${hashedKey}`;
-  const kv = await env.RATE_LIMIT_KV.get(kvKey, "text");
+  const segmentKeyValue = await getSegmentKeyValue(
+    heliconeProperties,
+    userId,
+    segment
+  );
+
+  const kvKey = `rl_${segmentKeyValue}_${heliconeAuthHash}`;
+  const kv = await rateLimitKV.get(kvKey, "text");
   const timestamps = kv !== null ? JSON.parse(kv) : [];
 
   const now = Date.now();
@@ -187,139 +175,7 @@ export async function updateRateLimitCounter(
 
   prunedTimestamps.push(now);
 
-  await env.RATE_LIMIT_KV.put(kvKey, JSON.stringify(prunedTimestamps), {
+  await rateLimitKV.put(kvKey, JSON.stringify(prunedTimestamps), {
     expirationTtl: Math.ceil(timeWindowMillis / 1000), // Convert timeWindowMillis to seconds for expirationTtl
   });
-}
-
-function generateRateLimitHeaders(
-  rateLimitCheckResult: RateLimitResponse,
-  rateLimitOptions: RateLimitOptions
-): { [key: string]: string } {
-  const policy = `${rateLimitOptions.quota};w=${rateLimitOptions.time_window};u=${rateLimitOptions.unit}`;
-  const headers: { [key: string]: string } = {
-    "Helicone-RateLimit-Limit": rateLimitCheckResult.limit.toString(),
-    "Helicone-RateLimit-Remaining": rateLimitCheckResult.remaining.toString(),
-    "Helicone-RateLimit-Policy": policy,
-  };
-
-  if (rateLimitCheckResult.reset !== undefined) {
-    headers["Helicone-RateLimit-Reset"] = rateLimitCheckResult.reset.toString();
-  }
-
-  return headers;
-}
-
-interface RateLimitingResult {
-  response: Response | null;
-  additionalHeaders: { [key: string]: string };
-}
-
-export async function handleRateLimiting(
-  requestSettings: RequestSettings,
-  request: Request,
-  requestBody: {
-    stream?: boolean | undefined;
-    user?: string | undefined;
-  },
-  env: Env,
-  ctx: ExecutionContext,
-  rateLimitOptions: RateLimitOptions,
-  startTime: Date
-): Promise<RateLimitingResult> {
-  const auth = request.headers.get("Authorization");
-
-  if (auth === null) {
-    return {
-      response: new Response("No authorization header found!", {
-        status: 401,
-      }),
-      additionalHeaders: {},
-    };
-  }
-
-  const hashedKey = await hash(auth);
-  const rateLimitCheckResult = await checkRateLimit(
-    request,
-    env,
-    rateLimitOptions,
-    hashedKey,
-    requestBody.user
-  );
-
-  const additionalHeaders = generateRateLimitHeaders(
-    rateLimitCheckResult,
-    rateLimitOptions
-  );
-  const message = `Rate limit reached with Helicone under policy ${rateLimitOptions.policy}. Please wait before making more requests.`;
-
-  if (rateLimitCheckResult.status === "rate_limited") {
-    const responseMessage = JSON.stringify({
-      error: {
-        message,
-        type: "rate_limit_error",
-        param: null,
-        code: null,
-      },
-    });
-    const rateLimitedResponse = new Response(responseMessage, {
-      status: 429,
-      headers: {
-        "content-type": "application/json;charset=UTF-8",
-        ...additionalHeaders,
-      },
-    });
-
-    const generateResponseHandler = async (): Promise<[boolean, string]> => {
-      return [false, responseMessage];
-    };
-
-    const result = await extractPrompt(request);
-    if (result.data !== null) {
-      const { body, prompt } = result.data;
-
-      const stringToStream = (str: string) => {
-        const encoder = new TextEncoder();
-        const readableStream = new ReadableStream({
-          start(controller) {
-            controller.enqueue(encoder.encode(str));
-            controller.close();
-          },
-        });
-
-        return readableStream;
-      };
-
-      const myStream = stringToStream(responseMessage);
-
-      const processedResponse = await processAndLogRequestResponse(
-        myStream,
-        generateResponseHandler,
-        auth,
-        request,
-        rateLimitedResponse,
-        requestSettings,
-        body,
-        env,
-        ctx,
-        startTime,
-        prompt
-      );
-
-      return {
-        response: processedResponse,
-        additionalHeaders,
-      };
-    } else {
-      return {
-        response: new Response(result.error, { status: 400 }),
-        additionalHeaders,
-      };
-    }
-  }
-
-  return {
-    response: null,
-    additionalHeaders,
-  };
 }

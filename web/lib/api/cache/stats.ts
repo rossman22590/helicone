@@ -107,9 +107,16 @@ GROUP BY response.body ->> 'model'::text
 ORDER BY count DESC
 LIMIT 10;
     `;
-  return dbExecute<{ model: string; count: number }>(
-    query,
-    builtFilter.argsAcc
+  return resultMap(
+    await dbExecute<{ model: string | null; count: number }>(
+      query,
+      builtFilter.argsAcc
+    ),
+    (x) =>
+      x.map((y) => ({
+        model: y.model ?? "Unknown",
+        count: +y.count,
+      }))
   );
 }
 
@@ -154,7 +161,10 @@ SELECT
     from request r
     where r.id = request.id
     limit 1
-  ) as prompt
+  ) as prompt,
+  (
+    select (coalesce(request.body ->>'model'))::text as model
+  ) as model
 FROM cache_hits
   left join request on cache_hits.request_id = request.id
 WHERE (
@@ -170,6 +180,7 @@ LIMIT 10;
     last_used: Date;
     first_used: Date;
     prompt: string;
+    model: string;
   }>(query, builtFilter.argsAcc);
 }
 

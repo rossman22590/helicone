@@ -67,12 +67,6 @@ const AuthLayout = (props: AuthLayoutProps) => {
       current: pathname.includes("/requests"),
     },
     {
-      name: "Errors",
-      href: "/errors",
-      icon: ExclamationCircleIcon,
-      current: pathname.includes("/errors"),
-    },
-    {
       name: "Cache",
       href: "/cache",
       icon: CircleStackIcon,
@@ -206,39 +200,6 @@ const AuthLayout = (props: AuthLayoutProps) => {
                       <div className="mt-5 h-0 flex-1 overflow-y-auto">
                         <nav className="space-y-1 px-2">
                           {navigation.map((item) => {
-                            if (
-                              item.name === "Keys" &&
-                              !isLoading &&
-                              count < 1
-                            ) {
-                              return (
-                                <Link
-                                  key={item.name}
-                                  href={item.href}
-                                  className={clsx(
-                                    item.current
-                                      ? "bg-gray-200 text-black"
-                                      : "text-gray-600 hover:bg-gray-100 hover:text-gray-900",
-                                    "group flex items-center px-2 py-2 text-md font-medium rounded-md w-full justify-between"
-                                  )}
-                                >
-                                  <div className="flex flex-row items-center">
-                                    <item.icon
-                                      className={clsx(
-                                        item.current
-                                          ? "text-black"
-                                          : "text-gray-600 group-hover:text-gray-900",
-                                        "mr-3 flex-shrink-0 h-5 w-5"
-                                      )}
-                                    />
-                                    {item.name}
-                                  </div>
-                                  <div>
-                                    <ExclamationCircleIcon className="h-6 w-6 mr-1 text-red-500" />
-                                  </div>
-                                </Link>
-                              );
-                            }
                             return (
                               <Link
                                 key={item.name}
@@ -266,39 +227,6 @@ const AuthLayout = (props: AuthLayoutProps) => {
                             Account
                           </p>
                           {accountNav.map((item) => {
-                            if (
-                              item.name === "Keys" &&
-                              !isLoading &&
-                              count < 1
-                            ) {
-                              return (
-                                <Link
-                                  key={item.name}
-                                  href={item.href}
-                                  className={clsx(
-                                    item.current
-                                      ? "bg-gray-200 text-black"
-                                      : "text-gray-600 hover:bg-gray-100 hover:text-gray-900",
-                                    "group flex items-center px-2 py-2 text-md font-medium rounded-md w-full justify-between"
-                                  )}
-                                >
-                                  <div className="flex flex-row items-center">
-                                    <item.icon
-                                      className={clsx(
-                                        item.current
-                                          ? "text-black"
-                                          : "text-gray-600 group-hover:text-gray-900",
-                                        "mr-3 flex-shrink-0 h-5 w-5"
-                                      )}
-                                    />
-                                    {item.name}
-                                  </div>
-                                  <div>
-                                    <ExclamationCircleIcon className="h-5 w-5 mr-1 text-red-500" />
-                                  </div>
-                                </Link>
-                              );
-                            }
                             return (
                               <Link
                                 key={item.name}
@@ -364,35 +292,6 @@ const AuthLayout = (props: AuthLayoutProps) => {
                 <div className="mt-5 flex flex-grow flex-col">
                   <nav className="flex-1 space-y-1 px-2 pb-4 pt-2">
                     {navigation.map((item) => {
-                      if (item.name === "Keys" && !isLoading && count < 1) {
-                        return (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className={clsx(
-                              item.current
-                                ? "bg-gray-200 text-black"
-                                : "text-gray-600 hover:bg-gray-100 hover:text-gray-900",
-                              "group flex items-center px-2 py-2 text-sm font-medium rounded-md w-full justify-between"
-                            )}
-                          >
-                            <div className="flex flex-row items-center">
-                              <item.icon
-                                className={clsx(
-                                  item.current
-                                    ? "text-black"
-                                    : "text-gray-600 group-hover:text-gray-900",
-                                  "mr-3 flex-shrink-0 h-5 w-5"
-                                )}
-                              />
-                              {item.name}
-                            </div>
-                            <div>
-                              <ExclamationCircleIcon className="h-5 w-5 mr-1 text-red-500" />
-                            </div>
-                          </Link>
-                        );
-                      }
                       return (
                         <Link
                           key={item.name}
@@ -421,35 +320,6 @@ const AuthLayout = (props: AuthLayoutProps) => {
                       Account
                     </p>
                     {accountNav.map((item) => {
-                      if (item.name === "Keys" && !isLoading && count < 1) {
-                        return (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            className={clsx(
-                              item.current
-                                ? "bg-gray-200 text-black"
-                                : "text-gray-600 hover:bg-gray-100 hover:text-gray-900",
-                              "group flex items-center px-2 py-2 text-sm font-medium rounded-md w-full justify-between"
-                            )}
-                          >
-                            <div className="flex flex-row items-center">
-                              <item.icon
-                                className={clsx(
-                                  item.current
-                                    ? "text-black"
-                                    : "text-gray-600 group-hover:text-gray-900",
-                                  "mr-3 flex-shrink-0 h-5 w-5"
-                                )}
-                              />
-                              {item.name}
-                            </div>
-                            <div>
-                              <ExclamationCircleIcon className="h-5 w-5 mr-1 text-red-500" />
-                            </div>
-                          </Link>
-                        );
-                      }
                       return (
                         <Link
                           key={item.name}
@@ -601,66 +471,7 @@ const AuthLayout = (props: AuthLayoutProps) => {
           <main className="flex-1 bg">
             <div className="mx-auto px-4 sm:px-8 bg-gray-100 h-full">
               {/* Replace with your content */}
-              {hasUnMigratedRequest &&
-                displayMigrationModal &&
-                (user?.email ?? "") !== DEMO_EMAIL && (
-                  <div className="pointer-events-none flex sm:justify-center mt-4">
-                    <div className="text-sm text-white w-full pointer-events-auto flex flex-col items-left justify-between gap-x-6 bg-cyan-500 shadow-md py-2.5 px-6 rounded-xl sm:py-3 sm:pr-3.5 sm:pl-4">
-                      <div className="text-sm leading-6 items-center font-bold">
-                        Sorry for the inconvenience
-                      </div>
-                      <div className=" leading-6items-center">
-                        <strong className="font-semibold">
-                          We recently migrated our systems to support orgs and
-                          are still migrating your data to the new system. This
-                          process is taking a few days to complete. Any reuqests
-                          before April 22nd are still being migrated. Please
-                          contact us on discord if you have any questions.
-                        </strong>
-                      </div>
-                      <button
-                        className="leading-6 text-left font-bold"
-                        onClick={() => {
-                          setDisplayMigrationModal(false);
-                        }}
-                      >
-                        Dismiss
-                      </button>
-                    </div>
-                  </div>
-                )}
-              {user?.email !== DEMO_EMAIL &&
-                !hasConvertedLoading &&
-                !hasConverted && (
-                  <div className="pointer-events-none flex sm:justify-center mt-4">
-                    <div className="w-full pointer-events-auto flex flex-col items-left justify-between gap-x-6 bg-red-500 shadow-md py-2.5 px-6 rounded-xl sm:py-3 sm:pr-3.5 sm:pl-4">
-                      <div className="text-sm leading-6 text-yellow-200 items-center">
-                        ⚠️ Action Required ⚠️
-                      </div>
-                      <div className="text-sm leading-6 text-white items-center">
-                        <strong className="font-semibold">
-                          We have detected you have not switched to using
-                          Helicone Keys. We are deprecating this way of matching
-                          requests to your account.
-                        </strong>
-                      </div>
-                      <div className="text-sm leading-6 text-white items-center">
-                        Please see our transition docs:{" "}
-                        <Link
-                          href="https://www.helicone.ai/auth-transition"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline"
-                        >
-                          <p className="inline font-semibold">
-                            Auth Transition
-                          </p>
-                          <ArrowTopRightOnSquareIcon className="h-4 w-4 mb-1 ml-1 inline" />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                )}
+
               {user?.email === DEMO_EMAIL && (
                 <div className="pointer-events-none flex sm:justify-center mt-4">
                   <div className="w-full pointer-events-auto flex items-center justify-between gap-x-6 bg-red-500 shadow-md py-2.5 px-6 rounded-xl sm:py-3 sm:pr-3.5 sm:pl-4">
