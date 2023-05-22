@@ -5,11 +5,26 @@ import {
 } from "../../../../services/hooks/useErrorPage";
 import { StackedBarChart } from "../../../shared/metrics/stackedBarChart";
 import { RenderPieChart } from "../../../shared/metrics/pieChart";
+import { Loading } from "../dashboardPage";
+import { Result } from "../../../../lib/result";
+import { RenderBarChart } from "../../../shared/metrics/barChart";
 
-interface ErrorsPanelProps {}
+interface ErrorsPanelProps {
+  errorsOverTime: Loading<Result<any[], string>>;
+}
+
+function unwrapDefaultEmpty<T>(data: Loading<Result<T[], string>>): T[] {
+  if (data === "loading") {
+    return [];
+  }
+  if (data.error !== null) {
+    return [];
+  }
+  return data.data;
+}
 
 const ErrorsPanel = (props: ErrorsPanelProps) => {
-  const {} = props;
+  const { errorsOverTime } = props;
 
   const pageCodes = useErrorPageCodes();
 
@@ -65,6 +80,10 @@ const ErrorsPanel = (props: ErrorsPanelProps) => {
             {pageCodes.errorCodes.isLoading ? (
               <div className="h-full w-full flex-col flex p-8">
                 <div className="h-full w-full rounded-lg bg-gray-300 animate-pulse" />
+              </div>
+            ) : pageCodes.errorCodes.data?.data?.length === 0 ? (
+              <div className="h-full w-full flex-col flex p-8 items-center justify-center align-middle">
+                No Errors!
               </div>
             ) : (
               <RenderPieChart
