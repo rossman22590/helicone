@@ -1,4 +1,4 @@
-![Helicone Logo](https://github.com/Helicone/helicone/blob/main/web/public/assets/logos/logo-black.png)
+![Helicone Logo](https://github.com/Helicone/helicone/blob/main/web/public/assets/logos/logo-black.png) 
 
 # Helicone.ai 
  
